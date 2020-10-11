@@ -21,12 +21,17 @@ ul{
 
 /* header*/
 header{
-  background:#F97068;
-  color: #ffffff;
+  background:rgb(229, 229, 231);
+  color: black;
  min-height:70px;
   border-bottom: 70px;
-  border-bottom: #e8491d 3px solid;
+  margin-bottom: 10px;
+  font-family: sans-serif;
 
+}
+.current{
+  color: blue;
+  border-bottom: 1px solid lightsalmon;
 }
 .logo img{
   float:left;
@@ -40,12 +45,11 @@ header{
 header a{
   color: black;
   padding: 5px 20px;
-  border: 1px solid transparent;
-  transition: 0.6s ease;
   float: center;
   text-decoration: none;
 text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 header li{
       float: left;
@@ -57,15 +61,10 @@ header nav{
   margin-top: 10px;
 
 }
-
 header ul li  a:hover{
-  color:#000;
+  color:gray;
+  border-bottom: 3px solid pink;
   }
-header .current a:hover{
-  color: #57C4E5;
-  font-weight: bold;
-}
-
 
 .showcase img{
   height: 480px;
@@ -107,67 +106,57 @@ color:#fff;
   display: block;
 }
 footer{
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  background: #111;
-  padding: -40px;
-  margin-top: 0px;
+  background: rgb(47, 47, 47);
   color: #ffffff;
-    text-align: center;
+  padding-top: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-.section{
-  width: 90%;
-  margin:auto;
-  overflow: hidden;
-
+.main-footer h2{
+  margin-left: 45vw;
+}
+.footer-headline{
+  color: rgba(255, 255, 255, 0.637);
+  font-size:1.3em;
+  margin-left: 30vw;
+  margin-bottom: 20px;
 }
 
-#contact-section .section h2{
-text-align: center;
-text-decoration: none;
-color:rgb(238,235,235);
-letter-spacing: 2px;
+table,td{
+  margin-left: 30vw;
 }
-#contact-section .section p{
-  text-align: center;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 3%;
-  color: #fff;
-  letter-spacing: 3px;
-
+td{
+  margin-left: 10px;
 }
 
-.form{
-  font-size: 16px;
-  font-style: italic;
-  color: #fff;
-  letter-spacing: 2px;
-}/*
 input{
-  padding: 10px;
-  margin: 10px;
-  width: 70px;
-  background-color: rgba(136,133,133,0.5);
-  color:#fff;
-  border:none;
-  outline: none;
+  width:400px;
+  padding: 5px;
+  font-size: 0.9em;
 }
-input::placeholder{
-  color: #fff;
-}*/
-.Comments{
-  padding: 10px;
-  margin: 10px;
-  width: 70px;
-  background-color: rgba(136,133,133,0.5);
-  color:#fff;
-  border:none;
-  outline: none;
+textarea{
+  padding: 5px;
+  font-size: 0.9em;
 }
-Comments::placeholder{
-  color: #fff;
+input:focus{
+  background-color: azure;
+  border:1px solid pink;
+  border-radius: 0.3em;
+}
+textarea:focus{
+  background-color: azure;
+  border:1px solid pink;
+  border-radius: 0.3em;
+}
+td{
+  padding: 5px 5px 5px 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearnce:none;
+  margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
 }
