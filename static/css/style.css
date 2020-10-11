@@ -169,3 +169,16 @@ input[type=number]{
   background-color: black;
   overflow: hidden;
 }
+*{
+  box-sizing:border-box;
+}
+.col-3{
+  float:left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
