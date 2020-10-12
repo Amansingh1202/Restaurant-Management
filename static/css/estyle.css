@@ -1,0 +1,74 @@
+.header {
+    border-bottom: 3px solid lightgray;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+    color: black;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: rgb(221, 160, 198);
+}
+
+.navbar ul li {
+    padding-left: 25px;
+}
+
+.about h1 {
+    padding-top: 15px;
+    padding-left: 20px;
+    font-family: 'Cookie', cursive;
+    font-size: 90px;
+    text-align: center;
+}
+
+.dash::after {
+    content: '';
+    background: lightgray;
+    width: 200px;
+    height: 3px;
+    border-radius: 5px;
+    position: fixed;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.small-container {
+    margin: 60px;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 5px;
+    min-width: 200px;
+    margin-bottom: 70px;
+    transition: transform 0.5s;
+    border-spacing: 20px
+}
+
+.col img {
+    padding-left: 90px;
+}
+
+.font_1 {
+    font-family: 'EB Garamond', serif;
+    font-size: x-large;
+    text-align: center;
+}
+
+.font_2 {
+    font-family: 'Lobster Two', cursive;
+    font-size: small;
+    text-align: center;
+}
+
+
+/*font-family: 'EB Garamond',
+serif;
+font-family: 'Lobster Two', cursive;*/
