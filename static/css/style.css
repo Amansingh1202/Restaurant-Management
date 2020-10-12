@@ -42,7 +42,7 @@ header{
   max-width:1200px;
   margin:auto;
 }
-header a{
+.nav1 a{
   color: black;
   padding: 5px 20px;
   float: center;
@@ -135,6 +135,7 @@ input{
 textarea{
   padding: 5px;
   font-size: 0.9em;
+  width:400px;
 }
 input:focus{
   background-color: azure;
@@ -181,4 +182,33 @@ input[type=number]{
   content: "";
   clear: both;
   display: table;
+}
+.col3 img{
+  height: 300px;
+}
+label{
+  color:grey;
+  font-size:1.1em;
+}
+.col-3 img{
+  width:30vw;
+  height:50vh;
+  border-radius:0.4em;
+}
+.col-3{
+  padding: 10px;
+}
+.col-3 h2{
+  color: gray;
+}
+
+.col-3:hover{
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  border-radius:0.4em;
+  color: purple;
+}
+.row{
+  margin-bottom: 20px;
 }

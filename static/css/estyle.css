@@ -27,18 +27,12 @@ body {
     text-align: center;
 }
 
-.dash::after {
-    content: '';
-    background: lightgray;
-    width: 200px;
-    height: 3px;
-    border-radius: 5px;
-    position: fixed;
-    top: 39%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.line{
+    background-color: gray;
+    width:15vw;
+    height:2px;
+    margin-left: 43vw;
 }
-
 .small-container {
     margin: 60px;
 }
