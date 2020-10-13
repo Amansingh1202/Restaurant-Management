@@ -201,8 +201,23 @@ label{
 .col-3 h2{
   color: gray;
 }
-
-
+.btn2{
+  background-color: darkmagenta;
+  color:white;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 0.3em;
+}
+.btn2:hover{
+  background-color: lightcyan;
+  color:black;
+}
+.headline-text{
+  color: lightgoldenrodyellow;
+  font-family: sans-serif;
+  font-size:0.9em;
+}
 .col-3:hover{
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
