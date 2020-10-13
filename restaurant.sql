@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2020 at 11:31 AM
+-- Generation Time: Oct 13, 2020 at 12:27 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.28
 
@@ -61,6 +61,18 @@ CREATE TABLE `food` (
   `name` varchar(20) DEFAULT NULL,
   `price` float(8,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `food`
+--
+
+INSERT INTO `food` (`food_id`, `name`, `price`) VALUES
+(1, 'Hyderabadi Biryani', 500.00),
+(2, 'Rogan Josh', 800.00),
+(3, 'Masala Dosa', 300.00),
+(4, 'Pulao', 400.00),
+(5, 'Pav Bhaji', 140.00),
+(6, 'Cake', 560.00);
 
 -- --------------------------------------------------------
 
@@ -170,7 +182,7 @@ ALTER TABLE `delivery_boy`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `online`
