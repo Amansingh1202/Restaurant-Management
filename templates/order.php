@@ -14,11 +14,29 @@
             </div>
           <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="order.html" class="current">ORDER</a></li>
+          <li><a href="order.php" class="current">ORDER</a></li>
           <li><a href="about.html">ABOUT US</a></li>
          </ul>
          </div>
          </header>
+
+<div>
+<?php
+$mysqli = new mysqli("localhost","root","","restaurant");
+$result = $mysqli -> query("SELECT * FROM food");
+if ($result) {
+  while($row = $result->fetch_assoc()) {
+    echo $row['name'];
+  }
+
+}
+else {
+  echo mysql_error();
+}
+$mysqli -> close();
+?> 
+</div>
+
          <footer class="main-footer">
             <section>
               <div class="section">
