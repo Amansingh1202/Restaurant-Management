@@ -1,0 +1,58 @@
+
+  h3{
+    font-size:1.4em;
+    font-family: sans-serif;
+    background: -webkit-linear-gradient(pink,purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 25vw;
+    margin-top: 30px;
+    
+  }
+  .clr{
+    font-size:1.4em;
+    font-weight: 600;
+    font-family: courier;
+    -webkit-animation: colorchange 20s infinite alternate;
+  }
+  @-webkit-keyframes colorchange{
+    0%{
+      color:blue;
+    }
+    20%{
+      color:magenta;
+    }
+    40%{
+      color:green;
+    }
+    60%{
+      color:red;
+    }
+    80%{
+      color:purple;
+    }
+    100%{
+      color:orange;
+    }
+  }
+  select{
+    font-size: 1.1em;
+    background-color: paleturquoise;
+    padding: 2px;
+    border:2px solid purple;
+  }
+  button {
+    background-color: darkmagenta;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 0.3em;
+  margin:10px 40vw 40px;
+}
+
+
+button:hover {
+    background-color: greenyellow;
+    color: black;
+}
