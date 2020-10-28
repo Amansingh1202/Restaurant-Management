@@ -25,10 +25,33 @@
 <div>
   <h3> Order your food now,we will deliver it to your doorstep!</h3>
 <form action="../src/confirm.php" method="post">
+<table>
+<tr>
+<td class='clr'>
+Your name:
+</td>
+<td><input type='text' name="first-name" placeholder="First Name" required />
+<input type='text' name="last-name" placeholder="Last Name" required />
+</td>
+<tr>
+<td class='clr'>
+Phone number:
+</td>
+<td><input name="phone" placeholder="Phone number" required />
+</td>
+</tr>
+<tr>
+<td class='clr'>
+Pin Code:
+</td>
+<td><input name="pin" placeholder="Pin Code" required />
+</td>
+</tr>
+
+</tr>
 <?php
 $mysqli = new mysqli("localhost","root","","restaurant");
 $result = $mysqli -> query("SELECT * FROM food");
-echo "<table>";
 echo "<tr>";
 echo "<td class='clr'>Select Food 1:</td>";
 echo "<td>";
@@ -104,9 +127,9 @@ echo "</select>";
 echo "</td>";
 echo "</tr>";
 
-echo"</table>";
 $mysqli -> close();
 ?>
+</table>
 <button type="submit">Submit</button>
 </form>
 </div>
