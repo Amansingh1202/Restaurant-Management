@@ -45,8 +45,8 @@ else{
     }
     }
     $query1 = "INSERT INTO customer (first_name,last_name,amount,phone_number) VALUES ('$first_name','$last_name','$amount','$phone')";
-    echo $query1;
     $result7 = $mysqli->query($query1);
+    $cust_id = $mysqli->insert_id;
 }
 
 
@@ -55,7 +55,25 @@ $age = $names[$val][1];
 $nameDel = $names[$val][0];
 $DOB = $names[$val][2];
 $query2 = "INSERT INTO delivery_boy(age,DOB,name,pin_code) VALUES ('$age','$DOB','$nameDel','$pin')";
-echo $query2;
 $result8 = $mysqli->query($query2);
+$del_id = $mysqli->insert_id;
 
+$date1 = date("Y-m-d");
+$receipt = rand(1,1000000);
+if ($food1 == 'none'){
+    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt',NULL,'$food2','$food3','$food4','$cust_id')";
+}elseif ($food2 == 'none'){
+    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1',NULL,'$food3','$food4','$cust_id')";
+}elseif ($food3 == 'none'){
+    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1','$food2',NULL,'$food4','$cust_id')";
+}elseif ($food4 == 'none'){
+    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1','$food2','$food3',NULL,'$cust_id')";
+}else{
+    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1','$food2','$food3','$food4','$cust_id')";
+}
+$result9 = $mysqli->query($query3);
+$order_id = $mysqli->insert_id;
+
+$query4 = "INSERT INTO online(order_id,del_id) VALUES ('$order_id','$del_id')";
+$result10 = $mysqli->query($query4);
 ?>
