@@ -1,4 +1,8 @@
+
 <?php
+
+echo "<link rel='stylesheet' href='../static/css/confirm.css' type='text/css'>";
+
 $mysqli = new mysqli("localhost","root","","restaurant");
 $first_name=$_POST["first-name"];
 $last_name=$_POST["last-name"];
@@ -70,4 +74,11 @@ $order_id = $mysqli->insert_id;
 
 $query4 = "INSERT INTO online(order_id,del_id) VALUES ('$order_id','$del_id')";
 $result10 = $mysqli->query($query4);
+
+echo "<img src='../static/images/smile.png'>";
+echo "<h2>Hurray your order placed!!</h2>";
+echo "<h3>Your order will be delivered by ::$nameDel </h3>";
+
 ?>
+</body>
+</html>
