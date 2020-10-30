@@ -10,7 +10,9 @@ $food3=$_POST["food3"];
 $food4=$_POST["food4"];
 $cust_id = 0;
 
-$result = $mysqli -> query("SELECT * FROM customer WHERE first_name=".$first_name."AND last_name=".$last_name);
+$names = array(array("Raj",25,"1995-09-09"),array("Sumit",22,"1998-09-09"),array("Malik",23,"1997-09-09"));
+
+$result = $mysqli -> query("SELECT * FROM customer WHERE first_name=".$first_name." AND last_name=".$last_name);
 if($result){ 
     while($row = $result -> fetch_assoc()){
         $cust_id = $row["cust_id"];
@@ -18,7 +20,6 @@ if($result){
 }
 else{
     $amount = 0;
-    $cust_id = uniqid();
     if($food1 != 'none'){
         $result2 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food1'");
         while($row2 = $result2 -> fetch_assoc()){
@@ -38,13 +39,23 @@ else{
     }
     }
     if($food4 != 'none'){
-        $result5 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food5'");
+        $result5 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food4'");
         while($row5 = $result5 -> fetch_assoc()){
         $amount += $row5["price"];
     }
     }
-    $query1 = "INSERT INTO customer (cust_id,first_name,last_name,amount,phone_number) VALUES ('$cust_id','$first_name','$last_name','$amount','$phone')";
-
+    $query1 = "INSERT INTO customer (first_name,last_name,amount,phone_number) VALUES ('$first_name','$last_name','$amount','$phone')";
+    echo $query1;
     $result7 = $mysqli->query($query1);
 }
+
+
+$val = rand(0,2);
+$age = $names[$val][1];
+$nameDel = $names[$val][0];
+$DOB = $names[$val][2];
+$query2 = "INSERT INTO delivery_boy(age,DOB,name,pin_code) VALUES ('$age','$DOB','$nameDel','$pin')";
+echo $query2;
+$result8 = $mysqli->query($query2);
+
 ?>
