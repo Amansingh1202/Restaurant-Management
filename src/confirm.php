@@ -60,13 +60,7 @@ $del_id = $mysqli->insert_id;
 
 $date1 = date("Y-m-d");
 $receipt = rand(1,1000000);
-if ($food1 == 'none'){
-    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt',NULL,'$food2','$food3','$food4','$cust_id')";
-}elseif ($food2 == 'none'){
-    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1',NULL,'$food3','$food4','$cust_id')";
-}elseif ($food3 == 'none'){
-    $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1','$food2',NULL,'$food4','$cust_id')";
-}elseif ($food4 == 'none'){
+if ($food4 == ''){
     $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1','$food2','$food3',NULL,'$cust_id')";
 }else{
     $query3 = "INSERT INTO `order_name`(`date`,`amount`,`receipt_no`,`food_id1`,`food_id2`,`food_id3`,`food_id4`,`customer_id`) VALUES ('$date1','$amount','$receipt','$food1','$food2','$food3','$food4','$cust_id')";
