@@ -24,25 +24,19 @@ if($result){
 }
 else{
     $amount = 0;
-    if($food1 != 'none'){
-        $result2 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food1'");
-        while($row2 = $result2 -> fetch_assoc()){
-        $amount += $row2["price"];
+    $result2 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food1'");
+    while($row2 = $result2 -> fetch_assoc()){
+    $amount += $row2["price"];
     }
+    $result3 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food2'");
+    while($row3 = $result3 -> fetch_assoc()){
+    $amount += $row3["price"];
     }
-    if($food2 != 'none'){
-        $result3 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food2'");
-        while($row3 = $result3 -> fetch_assoc()){
-        $amount += $row3["price"];
+    $result4 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food3'");
+    while($row4 = $result4 -> fetch_assoc()){
+    $amount += $row4["price"];
     }
-    }
-    if($food3 != 'none'){
-        $result4 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food3'");
-        while($row4 = $result4 -> fetch_assoc()){
-        $amount += $row4["price"];
-    }
-    }
-    if($food4 != 'none'){
+    if($food4 != ''){
         $result5 = $mysqli -> query("SELECT * FROM food WHERE food_id='$food4'");
         while($row5 = $result5 -> fetch_assoc()){
         $amount += $row5["price"];
